@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" role="img" aria-label="SMM-Autopilot — your AI SMM team for any niche &amp; region">
+  <defs>
+    <marker id="ahp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M2 2L8 5L2 8" fill="none" stroke="#d97757" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="300" rx="22" fill="#faf9f5"/>
+  <rect x="0.7" y="0.7" width="1198.6" height="298.6" rx="21.3" fill="none" stroke="#e8e6dc" stroke-width="1.4"/>
+  <text x="76" y="140" font-family="Georgia, 'Times New Roman', Times, serif" font-size="74" font-weight="700" fill="#141413" letter-spacing="-0.5">SMM<tspan fill="#d97757">-Autopilot</tspan></text>
+  <text x="79" y="184" font-family="Georgia, 'Times New Roman', Times, serif" font-size="26" font-style="italic" fill="#87867f">Your AI SMM team for any niche &amp; region</text>
+  <text x="80" y="223" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#b0aea5" letter-spacing="0.5">config-driven  ·  provider-agnostic  ·  runs on your own keys</text>
+  <g>
+    <circle cx="838" cy="96" r="12" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+    <circle cx="838" cy="150" r="12" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+    <circle cx="838" cy="204" r="12" fill="#ffffff" stroke="#d97757" stroke-width="1.5"/>
+    <path d="M853 99 L929 145" fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#ahp)" opacity="0.9"/>
+    <path d="M853 150 L927 150" fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#ahp)" opacity="0.9"/>
+    <path d="M853 201 L929 155" fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#ahp)" opacity="0.9"/>
+    <circle cx="948" cy="150" r="20" fill="#f3e2d9" stroke="#d97757" stroke-width="1.8"/>
+    <path d="M970 150 L1038 150" fill="none" stroke="#d97757" stroke-width="1.6" marker-end="url(#ahp)"/>
+    <rect x="1046" y="112" width="118" height="76" rx="8" fill="#ffffff" stroke="#e0c9bf" stroke-width="1.4"/>
+    <rect x="1060" y="128" width="74" height="6" rx="3" fill="#d97757"/>
+    <rect x="1060" y="144" width="90" height="5" rx="2.5" fill="#c9c6bb"/>
+    <rect x="1060" y="158" width="84" height="5" rx="2.5" fill="#c9c6bb"/>
+    <rect x="1060" y="172" width="64" height="5" rx="2.5" fill="#c9c6bb"/>
+  </g>
+</svg>

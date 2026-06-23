@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="SMM-Autopilot social preview card">
+  <defs>
+    <marker id="ahog" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 2L8 5L2 8" fill="none" stroke="#d97757" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#faf9f5"/>
+  <rect x="40" y="40" width="1200" height="560" rx="18" fill="none" stroke="#e8e6dc" stroke-width="1.5"/>
+  <text x="96" y="258" font-family="Georgia, 'Times New Roman', Times, serif" font-size="96" font-weight="700" fill="#141413" letter-spacing="-1">SMM<tspan fill="#d97757">-Autopilot</tspan></text>
+  <text x="99" y="318" font-family="Georgia, 'Times New Roman', Times, serif" font-size="35" font-style="italic" fill="#6f6d64">AI SMM team for any niche &amp; region</text>
+  <text x="100" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" fill="#57564f">Turns public Instagram data into a weekly strategy report,</text>
+  <text x="100" y="428" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" fill="#57564f">with every metric recomputed from real posts.</text>
+  <text x="100" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="19" font-weight="500" fill="#8a877c" letter-spacing="0.4">github.com/maxrihter/smm-autopilot   ·   MIT   ·   no API keys to try</text>
+  <g>
+    <circle cx="956" cy="250" r="14" fill="#ffffff" stroke="#d97757" stroke-width="1.6"/>
+    <circle cx="956" cy="320" r="14" fill="#ffffff" stroke="#d97757" stroke-width="1.6"/>
+    <circle cx="956" cy="390" r="14" fill="#ffffff" stroke="#d97757" stroke-width="1.6"/>
+    <path d="M974 254 L1042 314" fill="none" stroke="#d97757" stroke-width="1.6" marker-end="url(#ahog)" opacity="0.9"/>
+    <path d="M974 320 L1040 320" fill="none" stroke="#d97757" stroke-width="1.6" marker-end="url(#ahog)" opacity="0.9"/>
+    <path d="M974 386 L1042 326" fill="none" stroke="#d97757" stroke-width="1.6" marker-end="url(#ahog)" opacity="0.9"/>
+    <circle cx="1064" cy="320" r="24" fill="#f0ddd3" stroke="#d97757" stroke-width="2"/>
+    <path d="M1090 320 L1150 320" fill="none" stroke="#d97757" stroke-width="1.8" marker-end="url(#ahog)"/>
+    <rect x="1158" y="278" width="86" height="84" rx="9" fill="#ffffff" stroke="#e0c9bf" stroke-width="1.5"/>
+    <rect x="1174" y="298" width="54" height="7" rx="3.5" fill="#d97757"/>
+    <rect x="1174" y="316" width="64" height="5" rx="2.5" fill="#c9c6bb"/>
+    <rect x="1174" y="331" width="60" height="5" rx="2.5" fill="#c9c6bb"/>
+    <rect x="1174" y="346" width="46" height="5" rx="2.5" fill="#c9c6bb"/>
+  </g>
+</svg>

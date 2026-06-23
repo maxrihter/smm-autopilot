@@ -1,0 +1,161 @@
+# SMM-Autopilot tenant config — worked example: "Barkwell", a fictional US
+# dog-wellness DTC brand. Copy to config/tenant.yaml (or run `smm-autopilot init`)
+# and edit for your brand. Secrets (APIFY_TOKEN, LLM keys) live in .env, never here.
+
+brand:
+  name: Barkwell
+  region: US
+  content_language: English
+  report_language: English
+  positioning: >
+    Vet-formulated fresh dog food, treats, and supplements on subscription —
+    human-grade ingredients, transparent sourcing, sustainability-minded.
+  audience: >
+    Millennial & Gen-Z dog parents in the US who treat their dog as family and
+    will premiumize for health and transparency.
+  tone: >
+    Warm, playful, pet-parent-to-pet-parent. Soft CTAs. Never fear-based,
+    never medical or outcome guarantees.
+  ctas:
+    - Meet Barkwell
+    - Try the sampler box
+    - Build your dog's plan
+  forbidden_keywords:
+    - cure
+    - guaranteed
+    - prescription
+
+niche:
+  topic_whitelist:
+    - product          # fresh food, treats, supplements
+    - dog_health
+    - dog_training
+    - pet_parent_life
+    - rescue_adoption
+  keywords_l1:         # direct niche signal
+    - fresh dog food
+    - dog nutrition
+    - puppy food
+    - dog treats
+    - dog supplements
+    - dog wellness
+  keywords_l2:         # adjacent
+    - dog parent
+    - rescue dog
+    - puppy
+    - dog mom
+    - dog dad
+  keywords_l3:         # tangential
+    - dog training
+    - pet care
+    - dog enrichment
+  hashtags:
+    food:
+      - "#freshdogfood"
+      - "#dognutrition"
+      - "#healthydog"
+    community:
+      - "#dogsofinstagram"
+      - "#dogparent"
+      - "#rescuedog"
+    training:
+      - "#puppytraining"
+      - "#dogtraining"
+  search_queries:
+    - fresh dog food review
+    - homemade vs fresh dog food
+    - new puppy first week
+
+region:
+  timezone: America/New_York
+  events:
+    - name: National Puppy Day
+      month: 3
+      day: 23
+      relevance_tags: [puppy, rescue_adoption]
+      social_potential: high
+      window_days: 14
+    - name: National Pet Day
+      month: 4
+      day: 11
+      relevance_tags: [pet_parent_life]
+      social_potential: medium
+    - name: National Dog Day
+      month: 8
+      day: 26
+      relevance_tags: [community]
+      social_potential: high
+      window_days: 21
+    - name: Adopt-a-Shelter-Dog Month
+      month: 10
+      day: 1
+      relevance_tags: [rescue_adoption]
+      social_potential: high
+      window_days: 30
+    - name: Holiday gifting peak
+      month: 12
+      day: 10
+      relevance_tags: [product]
+      social_potential: high
+      window_days: 30
+  news_feeds:
+    - https://www.akc.org/feed/
+  news_keywords:
+    - dog
+    - puppy
+    - pet food
+    - recall
+
+# Public brands used purely as example accounts to monitor (no client data).
+competitors:
+  - name: The Farmer's Dog
+    instagram_url: https://www.instagram.com/thefarmersdog/
+  - name: Ollie
+    instagram_url: https://www.instagram.com/ollie/
+  - name: Spot & Tango
+    instagram_url: https://www.instagram.com/spotandtango/
+  - name: Nom Nom
+    instagram_url: https://www.instagram.com/nomnomnow/
+  - name: Sundays for Dogs
+    instagram_url: https://www.instagram.com/sundaysfordogs/
+  - name: BarkBox
+    instagram_url: https://www.instagram.com/barkbox/
+
+# Creator accounts to mine for viral formats + signals.
+discovery_targets:
+  - name: The Dogist
+    instagram_url: https://www.instagram.com/thedogist/
+  - name: Doug the Pug
+    instagram_url: https://www.instagram.com/itsdougthepug/
+  - name: Tuna
+    instagram_url: https://www.instagram.com/tunameltsmyheart/
+
+thresholds:
+  top_trends_count: 10
+  briefs_count: 3
+  max_posts_after_filter: 200
+
+safety_blocklist:
+  - animal cruelty
+  - dog fighting
+
+# Per-role model routing. Keys for the providers you use go in .env.
+llm:
+  filter:
+    primary:
+      provider: anthropic
+      model: claude-haiku-4-5-20251001
+  analyst:
+    primary:
+      provider: anthropic
+      model: claude-sonnet-4-6
+    # Bring-your-own fallback — any OpenAI-compatible endpoint (OpenAI, a local
+    # Ollama, or imago.market). Set OPENAI_API_KEY (+ OPENAI_BASE_URL for a
+    # non-OpenAI endpoint) in .env, then uncomment:
+    # fallback:
+    #   provider: openai
+    #   model: gpt-4o-mini
+  compliance:
+    primary:
+      provider: anthropic
+      model: claude-sonnet-4-6

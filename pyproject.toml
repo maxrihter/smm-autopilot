@@ -1,0 +1,78 @@
+[project]
+name = "smm-autopilot"
+version = "0.1.0"
+description = "Your AI SMM team for any niche & region. A config-driven, multi-agent growth-intelligence engine."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Max Romanov" }]
+keywords = ["smm", "instagram", "ai-agents", "langgraph", "llm", "marketing", "content-strategy"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Typing :: Typed",
+]
+
+dependencies = [
+  "langgraph>=1.1",
+  "langgraph-checkpoint-sqlite>=2.0",
+  "langchain-core>=1.2",
+  "langchain-anthropic>=0.3",
+  "langchain-openai>=0.2",       # OpenAI-compatible: OpenAI, Ollama, imago.market
+  "apify-client>=1.8",
+  "pydantic>=2.10",
+  "pyyaml>=6.0",
+  "feedparser>=6.0",
+  "httpx>=0.28",
+  "tenacity>=9.0",
+  "structlog>=24.4",
+  "typer>=0.12",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+mistral  = ["langchain-mistralai>=0.2"]
+google   = ["langchain-google-genai>=2.0"]
+sheets   = ["gspread>=6.0"]
+telegram = ["aiogram>=3.14"]
+server   = ["fastapi>=0.115", "uvicorn>=0.32"]
+postgres = ["psycopg[binary]>=3.1", "langgraph-checkpoint-postgres>=2.0"]
+dev      = ["pytest>=8.0", "pytest-asyncio>=0.24", "ruff>=0.6", "mypy>=1.11", "types-PyYAML>=6.0"]
+
+[project.scripts]
+smm-autopilot = "smm_autopilot.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/maxrihter/smm-autopilot"
+Repository = "https://github.com/maxrihter/smm-autopilot"
+Documentation = "https://github.com/maxrihter/smm-autopilot/tree/main/docs"
+Issues = "https://github.com/maxrihter/smm-autopilot/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smm_autopilot"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["smm_autopilot"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
