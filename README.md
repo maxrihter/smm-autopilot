@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="SMM-Autopilot: AI SMM team for any niche and region" width="100%">
+<img src="assets/banner.png" alt="smm-autopilot: your AI SMM team, every week" width="100%">
 
 SMM-Autopilot turns public Instagram data into a weekly social-media strategy report.
 You configure it for a brand once; it scrapes, analyzes, and writes the report, with every
